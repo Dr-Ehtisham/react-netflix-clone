@@ -56,7 +56,7 @@ size={40}
  <div 
  id={ 'slider' } 
  className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'>
- {movies?.map((item) => (
+ {user?.email ? movies.map((item) => (
     <div 
     key={item.id} 
     className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
@@ -76,7 +76,7 @@ size={40}
      
     </div>
     </div>
- ))}
+ )) : null}
  </div>
  <MdChevronRight
  onClick={slideRight}
